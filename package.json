@@ -1,0 +1,27 @@
+{
+  "name": "ccwc",
+  "version": "1.0.0",
+  "description": "Word Counter CLI App from codingchallenges.fyi by John Crickett",
+  "main": "app.ts",
+  "author": "Oluwatobi Adedeji",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "bin": "./dist/app.js",
+    "dev": " concurrently \"yarn run build\"  \"nodemon ./dist/app.js\"",
+    "clean": "rm -rf ./dist",
+    "start": "yarn run clean && yarn run build && node ./dist/src/app.js"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.2.0",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4",
+    "typescript": "^5.5.4"
+  },
+  "type": "module"
+}
