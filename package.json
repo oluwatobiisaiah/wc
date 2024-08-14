@@ -14,8 +14,7 @@
     "start": "yarn run clean && yarn run build && node ./dist/src/app.js"
   },
   "dependencies": {
-    "commander": "^12.1.0",
-    "ts-node": "^10.9.2"
+    "commander": "^12.1.0"
   },
   "devDependencies": {
     "@types/node": "^22.2.0",

@@ -29,6 +29,28 @@ program
                 `Number of lines: ${lines} Number of words: ${words} Number of characters: ${chars} Number of bytes: ${bytes}`
             );
 
+        }else{
+            switch (flags[0]) {
+                case "bytes":
+                    const bytes = await numberOfBytes(filePath);
+                    console.log(`Number of bytes: ${bytes}`);
+                    break;
+                case "lines":
+                    const lines = await numberOfLines(filePath);
+                    console.log(`Number of lines: ${lines}`);
+                    break;
+                case "words":
+                    const words = await numberOfWords(filePath);
+                    console.log(`Number of words: ${words}`);
+                    break;
+                case "chars":
+                    const chars = await numberOfCharacter(filePath);
+                    console.log(`Number of characters: ${chars}`);
+                    break;
+                default:
+                    console.log(`Name ${options.name} Number of bytes in a file : ${options.file}`);
+                    break;
+            }
         }
 
     } catch (error) {
