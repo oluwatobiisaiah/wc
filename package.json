@@ -8,10 +8,12 @@
   "private": false,
   "scripts": {
     "build": "tsc",
-    "bin": "./dist/app.js",
     "dev": " concurrently \"yarn run build\"  \"nodemon ./dist/app.js\"",
     "clean": "rm -rf ./dist",
     "start": "yarn run clean && yarn run build && node ./dist/src/app.js"
+  },
+  "bin": {
+    "ccwc":"./dist/app.js"
   },
   "dependencies": {
     "commander": "^12.1.0"

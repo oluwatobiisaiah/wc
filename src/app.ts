@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import {Command} from 'commander';
 import { numberOfBytes, numberOfCharacter, numberOfLines, numberOfWords } from './cliCommands.js';
 const program = new Command();
